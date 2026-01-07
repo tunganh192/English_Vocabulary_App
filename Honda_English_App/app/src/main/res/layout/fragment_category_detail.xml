@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Category Title -->
+    <TextView
+        android:id="@+id/tvCategoryTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category Title"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Creator -->
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Code :"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+
+    <!-- Buttons Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <!-- Join/Leave Button -->
+        <Button
+            android:id="@+id/btnLearn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/purple"
+            android:text="Học"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnJoinLeave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/purple"
+            android:text="Tham gia"
+            android:textColor="@android:color/white"
+            android:textSize="14sp" />
+
+        <!-- Learn Button -->
+    </LinearLayout>
+
+    <!-- Progress Section -->
+    <RelativeLayout
+        android:id="@+id/progressSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone">
+
+        <!-- Progress Percentage (Left) -->
+        <TextView
+            android:id="@+id/tvProgressPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="0.0%"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <!-- Progress Count (Right) -->
+        <TextView
+            android:id="@+id/tvProgressCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="0 từ"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_below="@id/tvProgressPercentage"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="0"
+            android:progressDrawable="@drawable/custom_progressbar" />
+    </RelativeLayout>
+
+    <!-- Words Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Danh sách từ vựng"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- RecyclerView for Words -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewWords"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

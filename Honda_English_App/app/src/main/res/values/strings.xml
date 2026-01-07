@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Học từ</string>
+    <string-array name="sort_options">
+        <item>Tăng dần theo mã</item>
+        <item>Giảm dần theo mã</item>
+        <item>Tăng dần theo tên</item>
+        <item>Giảm dần theo tên</item>
+    </string-array>
+</resources>

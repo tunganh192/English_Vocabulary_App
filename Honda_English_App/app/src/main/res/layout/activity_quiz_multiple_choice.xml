@@ -1,0 +1,284 @@
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:orientation="vertical"-->
+<!--    android:background="#EAF2FF">-->
+
+<!--    &lt;!&ndash; Toolbar &ndash;&gt;-->
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="56dp"-->
+<!--        android:background="@color/purple"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent">-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/imgBack"-->
+<!--                android:layout_width="30dp"-->
+<!--                android:layout_height="30dp"-->
+<!--                android:src="@drawable/back"-->
+<!--                android:contentDescription="Quay lại"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginTop="12dp"-->
+<!--                android:layout_alignParentStart="true"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/tvQuestionCount"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Câu 1/5"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:layout_centerInParent="true"/>-->
+<!--        </RelativeLayout>-->
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+<!--    &lt;!&ndash; Chữ "Chọn đáp án đúng" &ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/tvQuizTitle"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="CHỌN ĐÁP ÁN ĐÚNG:"-->
+<!--        android:textSize="18sp"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="16dp"/>-->
+
+<!--    &lt;!&ndash; Ô vuông to hơn và dịch xuống &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="250dp"-->
+<!--        android:background="@drawable/flashcard_background"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_marginTop="40dp">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvEnglishWord"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Cat"-->
+<!--            android:textSize="26sp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="@android:color/black"/>-->
+<!--    </LinearLayout>-->
+
+<!--    &lt;!&ndash; Các đáp án chia thành 2 cột &ndash;&gt;-->
+<!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:columnCount="2"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:padding="20dp">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer1"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Khủng long"-->
+<!--            android:textColor="@color/black" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Con nhím"-->
+<!--            android:textColor="@android:color/black" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Con mèo"-->
+<!--            android:textColor="@android:color/black" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer4"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Con vịt"-->
+<!--            android:textColor="@android:color/black" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer5"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Con chó"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btnAnswer6"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_columnWeight="1"-->
+<!--            android:layout_margin="8dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="Con sư tử"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:visibility="gone" />-->
+
+<!--    </GridLayout>-->
+
+<!--</LinearLayout>-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#EAF2FF">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/purple"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgBack"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back"
+                android:contentDescription="Quay lại"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/tvQuestionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Câu 1/5"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Chữ "Chọn đáp án đúng" -->
+    <TextView
+        android:id="@+id/tvQuizTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CHỌN ĐÁP ÁN ĐÚNG:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="16dp"/>
+
+    <!-- Ô vuông to hơn và dịch xuống -->
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:background="@drawable/flashcard_background"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp">
+
+        <TextView
+            android:id="@+id/tvEnglishWord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cat"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- Các đáp án chia thành 2 cột -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginTop="20dp"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btnAnswer1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Khủng long"
+            android:textColor="@color/black" />
+
+        <Button
+            android:id="@+id/btnAnswer2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Con nhím"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnAnswer3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Con mèo"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnAnswer4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Con vịt"
+            android:textColor="@android:color/black" />
+
+        <Button
+            android:id="@+id/btnAnswer5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Con chó"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btnAnswer6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Con sư tử"
+            android:textColor="@android:color/black"
+            android:visibility="gone" />
+
+    </GridLayout>
+
+</LinearLayout>

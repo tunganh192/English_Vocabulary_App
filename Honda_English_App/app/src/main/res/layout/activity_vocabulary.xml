@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F8F8F8">
+
+    <!-- Toolbar mở rộng với tiêu đề -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="115dp"
+        android:background="@color/purple"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Icon nằm bên trái -->
+            <ImageView
+                android:id="@+id/imgLeftIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/back"
+                android:contentDescription="Back"
+                android:layout_marginTop="12dp"
+                android:layout_alignParentStart="true"/>
+
+            <!-- Tiêu đề danh mục "Đồ ăn" ở giữa -->
+            <TextView
+                android:id="@+id/tvCategoryParent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đồ ăn"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"/>
+
+            <!-- Tiêu đề phụ "Từ quan trọng" nằm dưới "Đồ ăn" -->
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Từ quan trọng"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:layout_below="@id/tvCategoryParent"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"/>
+
+            <!-- Khu vực chứa % đã thuộc và tổng số từ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/tvCategoryTitle"
+                android:paddingHorizontal="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <!-- % đã thuộc (bên trái) -->
+                    <TextView
+                        android:id="@+id/tvProgress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.0% đã thuộc"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:layout_alignParentStart="true"/>
+
+                    <!-- Tổng số từ (bên phải) -->
+                    <TextView
+                        android:id="@+id/tvTotalWords"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="53 từ"
+                        android:textSize="14sp"
+                        android:textColor="@android:color/white"
+                        android:layout_alignParentEnd="true"
+                        android:layout_weight="1"
+                        android:gravity="end"/>
+                </LinearLayout>
+
+                <!-- Thanh tiến độ -->
+                <ProgressBar
+                    android:id="@+id/progressBarCategory"
+                    style="@android:style/Widget.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/custom_progressbar"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <!-- Danh sách từ vựng -->
+
+    <!-- Nút học -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewVocabulary"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/btnLearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HỌC"
+        android:textAllCaps="false"
+        android:background="@color/purple"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:drawableLeft="@drawable/baseline_dehaze_24"
+        android:drawablePadding="8dp"
+        android:gravity="center"
+        android:padding="12dp"/>
+</LinearLayout>

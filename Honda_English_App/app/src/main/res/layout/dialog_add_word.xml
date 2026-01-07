@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thêm từ vựng mới"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etEnglishWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Từ tiếng Anh (bắt buộc)"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:inputType="text"
+        android:maxLength="100" />
+
+    <EditText
+        android:id="@+id/etPronunciation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phiên âm (bắt buộc)"
+        android:inputType="text"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:maxLength="50"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/etVietnameseMeaning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nghĩa tiếng Việt (bắt buộc)"
+        android:inputType="text"
+        android:maxLength="100"
+        android:padding="12dp"
+        android:background="@drawable/edit_text_background"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end"
+        android:paddingTop="16dp">
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F44336" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lưu"
+            android:layout_marginStart="8dp"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50"
+            />
+
+    </LinearLayout>
+</LinearLayout>

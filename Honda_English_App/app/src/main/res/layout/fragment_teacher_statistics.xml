@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- Spinner chọn bài học -->
+    <Spinner
+        android:id="@+id/spinnerCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="@drawable/rounded_box" />
+
+    <!-- Tiêu đề thống kê chung -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thống kê chung"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp" />
+
+    <!-- Thống kê chung -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_box"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:id="@+id/tvTotalStudents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tổng số học sinh: 0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvAverageWordsLearned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Số từ trung bình đã học: 0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvAverageCorrectRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tỷ lệ trả lời đúng trung bình: 0%"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- Tiêu đề thống kê từng học sinh -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thống kê từng học sinh"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingBottom="8dp" />
+
+    <!-- RecyclerView hiển thị danh sách học sinh -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudentStats"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

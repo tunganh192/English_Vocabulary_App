@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn mục tiêu hằng ngày"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/rgDailyGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbFive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5 từ/ngày"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbEight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8 từ/ngày"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10 từ/ngày"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbCustom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mục tiêu của tôi..."
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etCustomDailyGoal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/edit_text_background"
+        android:hint="Nhập số từ (ví dụ: 5)"
+        android:imeOptions="actionDone"
+        android:inputType="number"
+        android:padding="12dp"
+        android:textColorHint="#B49191"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Lưu"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#4CAF50"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hủy"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#F44336"
+            android:layout_weight="1" />
+    </LinearLayout>
+</LinearLayout>

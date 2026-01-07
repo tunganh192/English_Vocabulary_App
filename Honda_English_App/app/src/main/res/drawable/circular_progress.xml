@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Vòng tròn nền xám -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#E0E0E0"/> <!-- Màu nền -->
+        </shape>
+    </item>
+
+    <!-- Vòng tròn tiến độ -->
+    <item>
+        <shape android:shape="ring"
+            android:innerRadiusRatio="3"
+            android:thicknessRatio="10"
+            android:useLevel="true">
+            <solid android:color="@color/orange"/> <!-- Màu tiến độ -->
+        </shape>
+    </item>
+</layer-list>

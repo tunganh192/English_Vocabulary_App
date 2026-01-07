@@ -1,0 +1,193 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.StatisticsActivity">
+
+    <!-- Phần tiêu đề thống kê -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thống kê học tập"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textColor="@color/purple" />
+
+    <!-- Ô tổng số từ đã học -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTotalWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tổng số từ đã học: 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Ô số từ đã thuộc (theo ngày) -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvKnownWords"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số từ đã thuộc hôm nay: 0"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:padding="4dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Layout chứa các thống kê -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Ô thống kê tuần (Có vòng tròn tiến độ) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressWeek"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:rotation="-90"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/circular_progress"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvWeekPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0% mục tiêu"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvWeekWords"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0/35 từ vựng trong tuần này"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Ô thống kê tháng (Có vòng tròn tiến độ) -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ProgressBar
+                        android:id="@+id/progressMonth"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:indeterminate="false"
+                        android:max="100"
+                        android:rotation="-90"
+                        android:progress="0"
+                        android:progressDrawable="@drawable/circular_progress"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/tvMonthPercent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0% mục tiêu"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvMonthWords"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="0/140 từ vựng trong tháng này"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</LinearLayout>

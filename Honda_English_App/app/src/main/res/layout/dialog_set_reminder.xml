@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:visibility="visible">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Đặt nhắc nhở"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Switch để bật/tắt nhắc nhở -->
+    <Switch
+        android:id="@+id/switchReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="Bật nhắc nhở" />
+
+    <!-- LinearLayout chứa các tùy chọn, ẩn mặc định -->
+    <LinearLayout
+        android:id="@+id/reminderOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <!-- TimePicker để chọn thời gian -->
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <!-- RadioGroup để chọn loại lặp lại -->
+        <RadioGroup
+            android:id="@+id/rgRepeatType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <RadioButton
+                android:id="@+id/rbOnce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Một lần"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbDaily"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hằng ngày"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rbInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Định kỳ"
+                android:textSize="16sp" />
+        </RadioGroup>
+
+        <!-- EditText để nhập repeatInterval, ẩn mặc định -->
+        <EditText
+            android:id="@+id/etRepeatInterval"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="Khoảng thời gian (HH:mm:ss)"
+            android:inputType="time"
+            android:padding="12dp"
+            android:paddingTop="8dp"
+            android:visibility="gone" />
+
+        <!-- Buttons Save và Cancel -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:paddingTop="16dp">
+
+            <Button
+                android:id="@+id/btnCancel"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hủy"
+                android:textColor="?attr/colorOnSurface" />
+
+            <Button
+                android:id="@+id/btnSave"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorPrimary"
+                android:text="Lưu"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
